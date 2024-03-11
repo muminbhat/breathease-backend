@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,3 +146,12 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True 
 
 STATIC_URL = 'staticfiles_build/'
+# Hosting
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR, 'static'),
+os.path.join(BASE_DIR, 'static', 'admin'),
+os.path.join(BASE_DIR, 'static', 'jazzmin'),
+os.path.join(BASE_DIR, 'static', 'rest_framework'),
+os.path.join(BASE_DIR, 'static', 'vendor'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
