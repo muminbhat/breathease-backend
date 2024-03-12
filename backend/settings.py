@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 import dj_database_url
 
 DATABASES = {
-'default': dj_database_url.config(default=('postgresql://postgres:NSWoGfFqemsSBCcjkTCigJSnqpQcJDel@viaduct.proxy.rlwy.net:58547/railway'))
+'default': dj_database_url.config(default=('postgresql://postgres:KlUuIsiXgLEcYDenhsnZBNXaSJvfhGWn@viaduct.proxy.rlwy.net:52778/railway'))
     }
 
 
